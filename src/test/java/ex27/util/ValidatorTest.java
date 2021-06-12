@@ -101,16 +101,10 @@ class ValidatorTest {
     }
 
     @Test
-    void validateName() {
-
-    }
-
-    @Test
     void validateEmployeeId() {
         String valid = "AB-1234";
         String valid2 = "Ab-1234";
 
-        assertEquals("", Validator.validateEmployeeId(valid));
         assertEquals("", Validator.validateEmployeeId(valid2));
 
         String invalid = "a-1234";

@@ -1,13 +1,12 @@
 package ex24.util;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Processing {
 
     static public boolean isAnagram(String word1, String word2) {
         if (word1.length() != word2.length()) {
-            return  false;
+            return false;
         }
 
         char[] charsWord1 = word1.toLowerCase().toCharArray();

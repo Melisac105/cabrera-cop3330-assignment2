@@ -6,7 +6,7 @@ public class Processing {
     static final char[] NUMBERS = "0123456789".toCharArray();
     static final char[] SPECIAL_CHARS = "!@#$%ˆ&*()-_+=".toCharArray();
 
-    static boolean containsSymbols(String password, char[] dictionary, int min) {
+     static boolean containsSymbols(String password, char[] dictionary, int min) {
         int sum = 0;
 
         for (int i = 0; i < dictionary.length; i++) {
@@ -15,7 +15,6 @@ public class Processing {
                 sum++;
             }
         }
-
         return sum >= min;
     }
 
@@ -49,8 +48,9 @@ public class Processing {
             return 3;
         } else if (isWeakPassword(password)) {
             return 2;
-        } else {
+        } else if(isVeryWeakPassword(password)){
             return 1;
         }
+        return 0;
     }
 }
