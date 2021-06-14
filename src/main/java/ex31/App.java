@@ -32,7 +32,6 @@ Display the results in a tabular format.
 
 package ex31;
 
-import ex31.util.Output;
 import ex31.util.Processing;
 import ex31.util.UsrInput;
 
@@ -54,9 +53,8 @@ public class App {
                 break;
             }
         }
-        int targetRate = Processing.calculateRate(age, restingPulse);
 
-//        Output.printTable(intensity, targetRate);
 
+        Processing.calculateRate(age, restingPulse);
     }
 }

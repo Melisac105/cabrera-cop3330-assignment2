@@ -2,11 +2,13 @@ package ex31.util;
 
 public class Processing {
 
-    static public int calculateRate(int age, int restingRate) {
-        int rate = 0;
-        for (int intensity = 55; intensity <= 95; intensity+=5) {
-            rate = (((220 - age) - restingRate) * (intensity / 100)) + restingRate;
+    static public void calculateRate(int age, int restingRate) {
+
+        System.out.print("Intensity | Rate\n");
+        System.out.print("----------|--------\n");
+
+        for(int i = 55; i <= 95; i+=5){
+            System.out.printf("%d%%\t\t  | %d bpm\n", i, (((220 - age) - restingRate) * (i / 100)) + restingRate);
         }
-        return 0;
     }
 }

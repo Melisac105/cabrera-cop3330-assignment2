@@ -28,11 +28,22 @@ Use a loop to trap bad input, so you can ensure that the user enters valid value
  */
 package ex29;
 
+import ex29.util.Output;
 import ex29.util.Processing;
 import ex29.util.UsrInput;
 
 public class App {
 
     public static void main(String[] args) {
+
+        int rate;
+
+        do {
+            rate = UsrInput.getRate();
+        } while (rate == -1);
+
+        int years = Processing.calculateYears(rate);
+        Output.printOutput(years);
+
     }
 }
