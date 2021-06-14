@@ -2,16 +2,13 @@ package ex29.util;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Scanner;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class UsrInputTest {
+class ProcessingTest {
 
     @Test
-    void getRate() {
-        int rate = 0;
-        String rateStr = "a";
+    void calculateYears() {
 
+        assertEquals(18, Processing.calculateYears(4));
     }
 }
