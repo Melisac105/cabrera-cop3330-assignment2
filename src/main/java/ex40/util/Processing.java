@@ -5,29 +5,18 @@ import java.util.*;
 public class Processing {
 
     public static class Data {
-        private String firstName;
-        private String lastName;
+        public String name;
         public String position;
         public String separationDate;
 
         public Data(String firstName, String lastName, String position, String separationDate) {
-            this.firstName = firstName;
-            this.lastName = lastName;
+            this.name = firstName + " " + lastName;
             this.position = position;
-
-            if (separationDate == null) {
-                this.separationDate = "";
-            } else {
-                this.separationDate = separationDate;
-            }
+            this.separationDate = separationDate == null ? "" : separationDate;
         }
 
         public boolean search(String term) {
-            return this.firstName.contains(term) || this.lastName.contains(term);
-        }
-
-        public String name() {
-            return firstName + " " + lastName;
+            return this.name.contains(term);
         }
     }
 
