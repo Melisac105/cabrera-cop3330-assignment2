@@ -1,6 +1,5 @@
 package ex27.util;
 
-import java.util.Locale;
 
 public class Validator {
 
@@ -92,7 +91,9 @@ public class Validator {
         if (isEmpty(value)) {
             errors = "The " + fieldName + " must be filled in.\n";
         } else if (!hasLengthOf(value, 2)) {
-            errors = "\"" + value + "\" is not a valid " + fieldName +  ". It is too short.\n";
+            errors = "The "+ fieldName + " must be at least 2 characters long\n";
+        } else if(!allLetters(value)) {
+            errors = "The "+ fieldName + " only contains letters\n";
         }
 
         return errors;
@@ -102,7 +103,7 @@ public class Validator {
         String error = "";
 
         if (!isEmployeeId(employeeId)) {
-            error = "\"" + employeeId +  "\" is not a valid ID.";
+            error = "The employee ID must be in the format of AA-1234\n";
         }
 
         return error;
@@ -112,7 +113,7 @@ public class Validator {
         String error = "";
 
         if (!isNumber(zipCode)) {
-            error += "The ZIP code must be numeric.";
+            error += "The ZIP code must be a 5 digit number\n";
         }
 
         return error;

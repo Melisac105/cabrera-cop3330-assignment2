@@ -9,12 +9,12 @@ public class Processing {
      static boolean containsSymbols(String password, char[] dictionary, int min) {
         int sum = 0;
 
-        for (int i = 0; i < dictionary.length; i++) {
-            String letter = dictionary[i] + "";
-            if (password.contains(letter)) {
-                sum++;
-            }
-        }
+         for (char c : dictionary) {
+             String letter = c + "";
+             if (password.contains(letter)) {
+                 sum++;
+             }
+         }
         return sum >= min;
     }
 
