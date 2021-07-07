@@ -43,6 +43,9 @@ public class App {
         while(true) {
             if(restingPulse >= 0) {
                 break;
+            } else {
+                System.out.println("Please enter a valid input");
+                restingPulse = UsrInput.getRestingPulse();
             }
         }
 
@@ -51,9 +54,11 @@ public class App {
         while (true) {
             if(age >= 0) {
                 break;
+            } else {
+                System.out.println("Please enter a valid input");
+                age = UsrInput.getAge();
             }
         }
-
 
         Processing.calculateRate(age, restingPulse);
     }

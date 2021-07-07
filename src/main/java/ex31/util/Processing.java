@@ -8,7 +8,8 @@ public class Processing {
         System.out.print("----------|--------\n");
 
         for(int i = 55; i <= 95; i+=5){
-            System.out.printf("%d%%\t\t  | %d bpm\n", i, (((220 - age) - restingRate) * (i / 100)) + restingRate);
+            float rate = Math.round((((220 - age) - restingRate) * i / 100) + restingRate);
+            System.out.printf("%d%%\t\t  | %.0f bpm\n", i, rate);
         }
     }
 }
