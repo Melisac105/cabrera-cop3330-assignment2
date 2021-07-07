@@ -1,4 +1,4 @@
-package ex40.util;
+package ex39.util;
 
 import java.util.List;
 
